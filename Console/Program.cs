@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BackendSimulator.ConsoleApp.ConsoleUI;
+using BackendSimulator.Application.Services;
+using BackendSimulator.Application.Interfaces;
+using BackendSimulator.Infrastructure.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 var services = new ServiceCollection();
@@ -9,9 +13,18 @@ services.AddLogging(config =>
     config.SetMinimumLevel(LogLevel.Information);
 });
 
+// Application services
+services.AddSingleton<TaskService>();
+
+// Infrastructure
+services.AddSingleton<ITaskRepository, InMemoryTaskRepository>();
+
+// Console UI
+services.AddSingleton<TaskConsoleRunner>();
+
 var provider = services.BuildServiceProvider();
 
-var logger = provider.GetRequiredService<ILogger<Program>>();
-logger.LogInformation("Backend Simulator started successfully.");
+var runner = provider.GetRequiredService<TaskConsoleRunner>();
+runner.Run();
 
 Console.ReadLine();

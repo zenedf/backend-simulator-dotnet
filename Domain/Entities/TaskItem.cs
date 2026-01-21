@@ -2,7 +2,7 @@
 
 public class TaskItem
 {
-    public Guid Id { get; set; }
+    public Guid Id { get; init; } = Guid.NewGuid();
     public string Title { get; private set; }
 
     public TaskItem(string title) =>
