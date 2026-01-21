@@ -46,7 +46,19 @@ This solution is organized into four projects:
 	- Initial domain entity created
 	- In-memory repository implementation
 
-_No business logic or features have been implemented yet._
+_Basic business logic has been introduced via application services, with no user-facing features yet._
+
+---
+
+## Implemented Features
+
+	- Application service for task management
+	- Constructor-based dependency injection
+	- In-memory repository implementation
+	- Logging within application services
+	- Console-driven execution without architecture violations
+
+---
 
 ## Roadmap
 
