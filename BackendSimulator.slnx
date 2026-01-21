@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Application/Application.csproj" Id="cb5670fa-7690-48db-bce2-6561513f8221" />
+  <Project Path="BackendSimulator/BackendSimulator.csproj" />
+  <Project Path="Console/Console.csproj" Id="3b145452-7732-41fd-987a-fa88b01f399f" />
+  <Project Path="Domain/Domain.csproj" Id="7b900769-e1b9-4e06-a3e7-c8c21d1d9443" />
+  <Project Path="Infrastructure/Infrastructure.csproj" Id="781e7b06-7c07-487a-b9f3-507c59487e3f" />
+</Solution>
