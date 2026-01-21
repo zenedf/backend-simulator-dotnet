@@ -31,10 +31,10 @@ This solution is organized into four projects:
 
 ## Dependency Flow
 
-- **Domain** — no dependencies (core entities and business rules)
-- **Application** — depends on Domain (use cases, interfaces)
-- **Infrastructure** — depends on Application and Domain (implementations)
-- **Console** — depends on Application and Infrastructure (composition root)
+- **Domain** ï¿½ no dependencies (core entities and business rules)
+- **Application** ï¿½ depends on Domain (use cases, interfaces)
+- **Infrastructure** ï¿½ depends on Application and Domain (implementations)
+- **Console** ï¿½ depends on Application and Infrastructure (composition root)
 
 ---
 
