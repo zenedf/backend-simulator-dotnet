@@ -32,6 +32,10 @@ public class TaskService
         _logger.LogInformation("Task created with ID: {TaskId}", task.Id); // look into potentially making this less expensive. [ CA1873 ]
     }
 
-    public IReadOnlyList<TaskItem> GetAllTasks() =>
-        _taskRepository.GetAll();
+    public IReadOnlyList<TaskItem> GetAllTasks()
+    {
+        _logger.LogInformation("Retrieving all tasks.");
+        return _taskRepository.GetAll();
+    }
+        
 }
