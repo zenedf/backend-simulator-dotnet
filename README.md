@@ -57,6 +57,9 @@ _Basic business logic has been introduced via application services, with no user
 	- In-memory repository implementation
 	- Logging within application services
 	- Console-driven execution without architecture violations
+	- Interactive console menu driving backend use cases
+	- Input validation and error handling at application boundaries
+	- Clear separation between console I/O and business logic
 
 ---
 
