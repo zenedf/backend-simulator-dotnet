@@ -52,16 +52,6 @@ public class TaskConsoleRunner
             }
         }
 
-        #region TESTING
-        //_taskService.CreateTask("Learn clean architecture");
-        //_taskService.CreateTask("Understand dependency injection");
-
-        //var tasks = _taskService.GetAllTasks();
-
-        //foreach (var task in tasks)
-        //    Console.WriteLine($"- {task.Id}: {task.Title}"); 
-        #endregion
-
         _logger.LogInformation("Task Console Runner stopped.");
     }
 
