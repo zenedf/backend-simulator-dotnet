@@ -63,6 +63,14 @@ _Basic business logic has been introduced via application services, with no user
 
 ---
 
+## Testing
+
+	- Unit tests for application services using xUnit
+	- Infrastructure dependencies mocked using Moq
+	- Validation and failure paths covered in tests
+
+---
+
 ## Roadmap
 
 Planned next steps:

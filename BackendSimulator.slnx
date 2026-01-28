@@ -4,4 +4,5 @@
   <Project Path="Console/ConsoleApp.csproj" Id="3b145452-7732-41fd-987a-fa88b01f399f" />
   <Project Path="Domain/Domain.csproj" Id="7b900769-e1b9-4e06-a3e7-c8c21d1d9443" />
   <Project Path="Infrastructure/Infrastructure.csproj" Id="781e7b06-7c07-487a-b9f3-507c59487e3f" />
+  <Project Path="Tests/Tests.csproj" Id="6c824ea9-6f00-47a8-8b48-89f9c40e4e5b" />
 </Solution>
