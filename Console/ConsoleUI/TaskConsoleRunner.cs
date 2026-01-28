@@ -8,7 +8,8 @@ public class TaskConsoleRunner
     private readonly TaskService _taskService;
     private readonly ILogger<TaskConsoleRunner> _logger;
 
-    private readonly string _menu = "=== Task Backend Simulator ===\n" +
+    private readonly string _menu = 
+        "=== Task Backend Simulator ===\n" +
         "1. Create task\n" +
         "2. List tasks\n" +
         "0. Exit\n" +
