@@ -22,7 +22,7 @@ public class TaskServiceTests
         );
     }
 
-    [Fact]
+    [Fact] // Happy Path
     public void CreateTask_ValidTitle_AddsTaskToRepository()
     {
         // Arrange
@@ -33,6 +33,24 @@ public class TaskServiceTests
         _repoMock.Verify(
             r => r.Add(It.Is<Domain.Entities.TaskItem>(t => t.Title == title)),
             Times.Once
+        );
+    }
+
+    [Fact] // Failure Path
+    public void CreateTask_EmptyTitle_ThrowsArgumentException()
+    {
+        // Arrange
+        var title = "   ";
+        // Act & Assert
+        var exception = Assert.Throws<ArgumentException>(() => 
+            _taskService.CreateTask(title)
+        );
+
+        Assert.Equal("Task title cannot be empty", exception.Message);
+
+        _repoMock.Verify(
+            r => r.Add(It.IsAny<Domain.Entities.TaskItem>()),
+            Times.Never
         );
     }
 }
