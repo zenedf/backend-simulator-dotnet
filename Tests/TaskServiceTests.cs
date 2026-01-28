@@ -1,5 +1,6 @@
 ﻿using BackendSimulator.Application.Interfaces;
 using BackendSimulator.Application.Services;
+using BackendSimulator.Domain.Entities;
 using Microsoft.Extensions.Logging;
 using Moq;
 
@@ -52,5 +53,24 @@ public class TaskServiceTests
             r => r.Add(It.IsAny<Domain.Entities.TaskItem>()),
             Times.Never
         );
+    }
+
+    [Fact] // Test Query Behavior
+    public void GetAllTasks_ReturnsTasksFromRepository()
+    {
+        // Arrange
+        var tasks = new List<TaskItem>
+        {
+            new TaskItem ( "Task 1" ),
+            new TaskItem ( "Task 2" )
+        };
+        _repoMock.Setup(r => r.GetAll()).Returns(tasks);
+
+        // Act
+        var result = _taskService.GetAllTasks();
+
+        // Assert
+        Assert.Equal(2, result.Count());
+        Assert.Equal("Task 1", result.First().Title);
     }
 }
