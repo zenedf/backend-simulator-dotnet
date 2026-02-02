@@ -8,5 +8,4 @@
   <Folder Name="/testing/">
     <Project Path="Tests/Tests.csproj" Id="6c824ea9-6f00-47a8-8b48-89f9c40e4e5b" />
   </Folder>
-  <Project Path="BackendSimulator/BackendSimulator.csproj" />
 </Solution>
