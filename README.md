@@ -20,12 +20,16 @@ This codebase is intended to serve as a **foundation** for future ASP.NET Core, 
 
 ## Architecture Overview
 
-This solution is organized into four projects:
+This solution is organized into the following projects:
 
-1. BackendSimulator.Console       - Application entry point
-2. BackendSimulator.Application   - Use cases and interfaces
-3. BackendSimulator.Domain        - Core domain entities
-4. BackendSimulator.Infrastructure - Infrastructure implementations
+**Production:**
+- BackendSimulator.Console        - Application entry point
+- BackendSimulator.Infrastructure - Infrastructure implementations
+- BackendSimulator.Application    - Use cases and interfaces
+- BackendSimulator.Domain         - Core domain entities
+
+**Testing:**
+- BackendSimulator.Tests          - Unit tests for domain and application logic
 
 ---
 
