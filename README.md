@@ -126,6 +126,8 @@ Completed:
 	- Moq 4.20.72
 	- xUnit 2.9.3
 	- xUnit.runner.visualstudio 3.1.5
+	- Swashbuckle.AspNetCore.SwaggerGen 10.1.1
+	- Swashbuckle.AspNetCore.SwaggerUI 10.1.1
 
 ---
 
