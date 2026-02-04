@@ -113,13 +113,19 @@ Completed:
 
 	- .NET 10
 	- C# 14
-	- Microsoft.Extensions.DependencyInjection 10.0.2
-	- Microsoft.Extensions.Logging 10.0.2
+	- coverlet.collector 6.0.4
 	- Microsoft.EntityFrameworkCore 10.0.2
+	- Microsoft.EntityFrameworkCore.Design 10.0.2
 	- Microsoft.EntityFrameworkCore.Sqlite 10.0.2
+	- Microsoft.Extensions.DependencyInjection 10.0.2
+	- Microsoft.Extensions.DependencyInjection.Abstractions 10.0.2
+	- Microsoft.Extensions.Logging 10.0.2
+	- Microsoft.Extensions.Logging.Abstractions 10.0.2
+	- Microsoft.Extensions.Logging.Console 10.0.2
 	- Microsoft.NET.Test.Sdk 18.0.1
-	- xUnit 2.9.3
 	- Moq 4.20.72
+	- xUnit 2.9.3
+	- xUnit.runner.visualstudio 3.1.5
 
 ---
 
