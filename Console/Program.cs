@@ -48,13 +48,13 @@ runner.Run();
 
 Console.ReadLine();
 
-// Find the solution root by searching for .sln file
+// Find the solution root by searching for .slnx/.sln file
 static string GetSolutionRoot()
 {
     // Start from the executable location
     var directory = new DirectoryInfo(AppContext.BaseDirectory);
     
-    // Walk up the directory try until we find a .slnx file
+    // Walk up the directory try until we find a .slnx/.sln file
     while (directory != null &&
         directory.GetFiles("*.sln").Length == 0 &&
         directory.GetFiles("*.slnx").Length == 0)
