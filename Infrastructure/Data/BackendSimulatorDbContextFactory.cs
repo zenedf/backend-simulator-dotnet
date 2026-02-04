@@ -8,7 +8,14 @@ public class BackendSimulatorDbContextFactory : IDesignTimeDbContextFactory<Back
     public BackendSimulatorDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<BackendSimulatorDbContext>();
-        optionsBuilder.UseSqlite("Data Source=backend.db");
+
+        // Use the same path as Program.cs
+        var solutionRoot = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), ".."));
+        var dataFolder = Path.Combine(solutionRoot, "Data");
+        Directory.CreateDirectory(dataFolder);
+        var dbPath = Path.Combine(dataFolder, "backend.db");
+
+        optionsBuilder.UseSqlite($"Data Source={dbPath}");
 
         return new BackendSimulatorDbContext(optionsBuilder.Options);
     }

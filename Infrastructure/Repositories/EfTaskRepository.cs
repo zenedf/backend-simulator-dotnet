@@ -3,7 +3,7 @@ using BackendSimulator.Domain.Entities;
 using BackendSimulator.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Repositories;
+namespace BackendSimulator.Infrastructure.Repositories;
 
 public class EfTaskRepository : ITaskRepository
 {
