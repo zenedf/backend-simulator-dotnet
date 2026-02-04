@@ -2,6 +2,7 @@
 using BackendSimulator.Application.Services;
 using BackendSimulator.Application.Interfaces;
 using BackendSimulator.Infrastructure.Repositories;
+using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,8 @@ services.AddSingleton<TaskService>();
 services.AddDbContext<BackendSimulatorDbContext>(options =>
     options.UseSqlite("Data Source=backend.db"));
 
-services.AddScoped<ITaskRepository, InMemoryTaskRepository>();
+// EF Core with SQLite
+services.AddScoped<ITaskRepository, EfTaskRepository>();
 
 // Console UI
 services.AddSingleton<TaskConsoleRunner>();
