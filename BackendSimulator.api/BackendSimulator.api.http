@@ -1,0 +1,6 @@
+@BackendSimulator.api_HostAddress = http://localhost:5010
+
+GET {{BackendSimulator.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
