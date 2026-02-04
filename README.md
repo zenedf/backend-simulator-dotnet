@@ -58,14 +58,16 @@ _Basic business logic has been introduced via application services, with no user
 
 ## Implemented Features
 
-	- Application service for task management
+	- Clean Architecture-based solution structure
+	- Application services implementing core use cases
 	- Constructor-based dependency injection
-	- In-memory repository implementation
+	- Repository abstraction with multiple implementations
+		- In-memory repository implementation
+		- EF Core-backed repository for persistent storage (SQLite)
 	- Logging within application services
-	- Console-driven execution without architecture violations
 	- Interactive console menu driving backend use cases
 	- Input validation and error handling at application boundaries
-	- Clear separation between console I/O and business logic
+	- Unit tests for application services using mocks
 
 ---
 
@@ -80,7 +82,7 @@ _Basic business logic has been introduced via application services, with no user
 ## Persistence
 
 	- EF Core integration via Infrastructure layer
-	- SQLite database for localpersistent storage
+	- SQLite database for local persistent storage
 	- Repository pattern maintained for data access abstraction
 	- Application and Domain remain persistence-agnostic
 
@@ -90,13 +92,20 @@ _Basic business logic has been introduced via application services, with no user
 
 Planned next steps:
 
+	- Expose backend via ASP.NET Core Web API
+	- Introduce authentication and authorization
+	- Add integration tests for Web API endpoints
+	- Replace SQLite with a production-grade database
+	- Deploy backend to Azure
+	- Add MAUI and/or Blazor clients
+
+Completed:
+
 	- Application services (use cases)
 	- Console-based interaction layer
 	- Domain validation rules
 	- Unit and integration tests
 	- Replace in-memory storage with a database
-	- Expose backend via ASP.NET Core Web API
-	- Deploy to Azure
 
 ---
 
