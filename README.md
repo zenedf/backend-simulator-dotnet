@@ -20,16 +20,18 @@ This codebase is intended to serve as a **foundation** for future ASP.NET Core, 
 
 ## Architecture Overview
 
-This solution is organized into the following projects:
+_This solution is organized into the following projects:_
 
-**Production:**
-- BackendSimulator.Console        - Application entry point
-- BackendSimulator.Infrastructure - Infrastructure implementations
-- BackendSimulator.Application    - Use cases and interfaces
-- BackendSimulator.Domain         - Core domain entities
+Production:
 
-**Testing:**
-- BackendSimulator.Tests          - Unit tests for domain and application logic
+	- BackendSimulator.Console        - Application entry point
+	- BackendSimulator.Infrastructure - Infrastructure implementations
+	- BackendSimulator.Application    - Use cases and interfaces
+	- BackendSimulator.Domain         - Core domain entities
+
+Testing:
+
+	- BackendSimulator.Tests          - Unit tests for domain and application logic
 
 ---
 
@@ -72,6 +74,15 @@ _Basic business logic has been introduced via application services, with no user
 	- Unit tests for application services using xUnit
 	- Infrastructure dependencies mocked using Moq
 	- Validation and failure paths covered in tests
+
+---
+
+## Persistence
+
+	- EF Core integration via Infrastructure layer
+	- SQLite database for localpersistent storage
+	- Repository pattern maintained for data access abstraction
+	- Application and Domain remain persistence-agnostic
 
 ---
 
