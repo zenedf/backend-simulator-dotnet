@@ -24,8 +24,6 @@ var dataFolder = Path.Combine(solutionRoot, "Data");
 Directory.CreateDirectory(dataFolder); // Ensure folder exists
 var dbPath = Path.Combine(dataFolder, "backend.db");
 
-Console.WriteLine($"Database location: {dbPath}"); // TESTING
-
 services.AddDbContext<BackendSimulatorDbContext>(options =>
     options.UseSqlite($"Data Source={dbPath}"));
 
