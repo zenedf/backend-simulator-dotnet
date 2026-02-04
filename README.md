@@ -115,6 +115,11 @@ Completed:
 	- C# 14
 	- Microsoft.Extensions.DependencyInjection 10.0.2
 	- Microsoft.Extensions.Logging 10.0.2
+	- Microsoft.EntityFrameworkCore 10.0.2
+	- Microsoft.EntityFrameworkCore.Sqlite 10.0.2
+	- Microsoft.NET.Test.Sdk 18.0.1
+	- xUnit 2.9.3
+	- Moq 4.20.72
 
 ---
 
