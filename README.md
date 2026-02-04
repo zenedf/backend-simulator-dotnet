@@ -88,6 +88,16 @@ _Basic business logic has been introduced via application services, with no user
 
 ---
 
+## API
+
+	- ASP.NET Core Web API adapter added
+	- Controllers act as thin adapters over application services
+	- DTOs used to isolate API contracts from domain models
+	- Backend supports multiple delivery mechanisms without duplication
+	- API documented using Swagger / OpenAPI
+
+---
+
 ## Roadmap
 
 Planned next steps:
